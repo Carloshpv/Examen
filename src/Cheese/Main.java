@@ -1,8 +1,8 @@
 /*
-*	grupo  :
-*	alumno :
-*	n.exp. :
-*	fecha  :
+*	grupo  :1GDAM
+*	alumno :Carlos Hugo Pizarro Vera
+*	n.exp. :7257
+*	fecha  :09/06/20022
  */
 package Cheese;
 
