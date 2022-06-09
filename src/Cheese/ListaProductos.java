@@ -31,11 +31,17 @@ public class ListaProductos {
      * Cuenta calculada con el número de productos contenidos en la lista
      */
     private static int n = 0;
-    
+    /**
+     * otorga el numero de productos
+     * @return n el numero de productos
+     */
     private int getNumProductos() {
         return n;
     }
-
+    /**
+     * Asigna un numero al numProductos
+     * @param n = numero de productos
+     */
     private void setNumProductos(int n) {
         this.n = n;
     }
@@ -49,7 +55,10 @@ public class ListaProductos {
     
         if ((campo.replace(" ","").isEmpty()) || (campo == null))  return true; else return false;
     }
-
+    /**
+     * Le da un nombre a una lista
+     * @param nombre = nombre que se le pone a la lista
+     */
     public ListaProductos(String nombre) {
     	if (parametro_vacio(nombre)) {
     		this.nombreLista = "noNamed";
@@ -58,10 +67,18 @@ public class ListaProductos {
     	this.nombreLista = nombre;
     	}
     }
+    /**
+     * devuelve el numero total de productos
+     * @return n = numero de productos 
+     */
     public int totalProductos(){
             return this.getNumProductos();
     }
-        
+    /**
+     * registra un producto e incrementa el n      
+     * @param prod nombre del producto
+     * @return prod nombre de producto
+     */
     public Producto registraProducto(Producto prod) {
         
         if (listaP.containsKey(prod.getcode())) {
@@ -72,7 +89,11 @@ public class ListaProductos {
         this.setNumProductos(n);
         return prod;
     }
-
+    /**
+     * descarta un producto de una lista decrementa n
+     * @param codigo codigo del producto
+     * @return prod devuelve el nombre del producto que se ha eliminado
+     */
     public Producto descartaProducto(String codigo) { 
         
         Producto prod = encuentraProducto(codigo);
@@ -83,7 +104,11 @@ public class ListaProductos {
         }
         return prod;
     }
-
+    /**
+     * Encuentra el producto pasando el codigo
+     * @param codigo codigo del producto
+     * @return prod si encuentra el producto codigo si no lo encuaentra
+     */
     public Producto encuentraProducto(String codigo) { 
         Producto prod = null;
         
